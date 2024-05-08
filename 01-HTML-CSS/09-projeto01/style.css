@@ -1,0 +1,226 @@
+*{
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+/*                                          HEADER                                                      */
+
+header{
+    background: #181818;
+    display: flex;
+    height: 70px;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 50px;
+    font-size: 16px;
+    position: sticky;
+    top: 0;
+    z-index: 9;
+}
+
+header ul{
+    display: flex;
+    gap: 30px;
+    list-style: none;
+}
+
+header a{
+    text-decoration: none;
+    color: rgb(182, 182, 182);
+}
+
+header a:hover{
+    color: white;
+}
+
+
+/*                                            HOME                                                      */
+.home{
+    width: 100%;
+    height: calc(100vh - 70px);
+    background-image: url(./images/programador.png);
+    position: relative;
+}
+
+.home div{
+    position: absolute;
+    top: 200px;
+    left: 150px;
+}
+
+.home h1{
+    color: white;
+    font-size: 48px;
+    margin-bottom: 8px;
+}
+
+.home p{
+    color: blue;
+    font-style: italic;
+    font-size: 20px;
+}
+
+.home a{
+    padding: 14px 12px;
+    background: white;
+    display: inline-block;
+    margin-top: 24px;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    font-size: 16px;
+    border-radius: 3px;
+    transition: 0.9s;
+}
+
+.home a:hover{
+    transform: scale(1.1);
+}
+
+
+/*                                            SOBRE                                                      */
+
+.sobre{
+    display: flex;
+    margin-left: 150px;
+    margin-right: 150px;
+    padding: 100px;
+    gap: 100px;
+    align-items: center;
+}
+
+.sobre img{
+    width: 350px;
+    border-radius: 5px;
+}
+
+.sobre p{
+    font-size: 16px;
+}
+
+
+/*                                            PROJETOS                                                      */
+
+.imagens{
+    text-align: center;
+    margin-bottom: 30px;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.imagens img{
+    width: 350px;
+    margin: 1px 2px;
+    opacity: 0.8;
+    transition: 0.7s;
+    cursor: pointer;
+}
+
+.imagens img:hover{
+    opacity: 1;
+}
+
+.projetos{
+    padding-top: 80px;
+}
+
+.proj{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.intro{
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.intro h2{
+    font-size: 28px;
+    margin-bottom: 6px;
+}
+
+.intro p{
+    font-style: italic;
+}
+
+.orcamento{
+    text-align: center;
+    margin-bottom: 70px;
+    transition: 0.5s;
+}
+
+.orcamento a{
+    padding: 10px 20px;
+    background: #000;
+    text-decoration: none;
+    color: white;
+    border-radius: 5px;
+}
+
+.orcamento:hover{
+    transform: scale(1.1);
+}
+
+/*                                            FOOTER                                                      */
+
+footer{
+    background-color: #000;
+    color: white;
+    display: flex;
+    gap: 10px;
+    padding: 50px 0px;
+    justify-content: center;
+}
+
+footer a{
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+}
+
+
+
+/*                                            RESPONSIVIDADE                                                      */
+
+@media(max-width: 1250px){
+    .home h1{
+        font-size: 34px;
+    }
+
+    .home p{
+        font-size: 18px;
+    }
+
+    .home a{
+        padding: 12px 10px;
+        margin-top: 24px;
+        font-size: 14px;
+    }
+
+    .sobre{
+        gap: 50px;
+        margin: 0;
+        align-items: right;
+    }
+}
+
+@media(max-width: 900px){
+    .sobre{
+        flex-direction: column;
+    }
+
+    .sobre img{
+        width: 350px;
+    }
+}
+
+@media(max-width: 550px){
+    .home div{
+        left: 120px;
+    }
+}

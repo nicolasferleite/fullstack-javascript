@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulários</title>
+</head>
+<body>
+    
+    <h1>Preencha seus dados:</h1>
+    <form action="">
+
+        <label for="first-name">Nome:</label>
+        <input type="text" id="first-name" name="first-name" placeholder="Digite seu nome" required> <br> <br>
+
+        <label for="first-name">Sobrenome:</label>
+        <input type="text" id="last-name" name="last-name" placeholder="Digite seu sobrenome" required> <br> <br>
+
+        <label for="email">Seu email:</label>
+        <input type="email" name="email" id="email" placeholder="Digite seu email"> <br> <br>
+
+        <label for="nivel"><b>Qual o seu nível como programador atualmente?</b></label> <br>
+        <label for=""><input type="radio" name="nivel" value="junior" checked> Júnior <!-- O checked faz já vi selecionado --></label>
+        <label for=""><input type="radio" name="nivel" value="pleno"> Pleno</label>
+        <label for=""><input type="radio" name="nivel" value="senior"> Sênior</label> <br> <br>
+
+        <label for="escolaridade"><b>Selecione a sua escolaridade.</b></label>
+        <select id="escolaridade" required>
+            <option selected disabled value="">Selecione</option>
+            <option value="">Educação Básica</option>
+            <option value="">Ensino Médio</option>
+            <option value="">Ensino Superior</option> 
+        </select> <br> <br>
+        
+        <label for="">
+            <b>Selecione as tecnologias que você conhece.</b>
+        </label> <br>
+        
+        <input type="checkbox" name="tec1" id="tec1" value="HTML">
+        <label for="tec1">HTML</label>
+        <input type="checkbox" name="tec2" id="tec2" value="CSS">
+        <label for="tec2">CSS</label>
+        <input type="checkbox" name="tec3" id="tec3" value="JavaScript">
+        <label for="tec3">JavaScript</label> <br> <br>
+
+        <label for="nascimento"><b>Data de nascimento:</b></label>
+        <input type="date" name="nascimento" id="nascimento">
+
+        <br> <br>
+        <input type="submit" value="Cadastrar">
+
+    </form>
+
+</body>
+</html>
