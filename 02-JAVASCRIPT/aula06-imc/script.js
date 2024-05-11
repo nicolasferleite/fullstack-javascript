@@ -13,30 +13,30 @@ var altura;
 var imc;
 var resultado;
 
-function calcular(event){
-  event.preventDefault();
+function calcular(event){ //event da um refresh na pagina
+    event.preventDefault(); // faz com q n der o refresh
 
-  peso = document.getElementById('peso').value;
-  altura = document.getElementById('altura').value;
+    peso = document.getElementById('peso').value;
+    altura = document.getElementById('altura').value;
+    resultado = document.getElementById('resultado');
 
-  imc = peso / (altura * altura);
+    imc = peso / (altura * altura);
+    resultado.innerHTML = '<br> Seu imc é: ' + imc.toFixed(2);
 
-  resultado = document.getElementById('resultado');
+    if(imc < 17){
+      resultado.innerHTML += '<br> Você está muito abaixo do peso';
+    } else if(imc >= 17 && imc < 18.5){
+      resultado.innerHTML += '<br> Você está abaixo do peso';
+    } else if(imc >= 18.5 && imc < 25){
+      resultado.innerHTML += '<br> Você está com o peso normal';
+    } else if(imc >= 25 && imc < 30){
+      resultado.innerHTML += '<br> Você está acima do peso';
+    } else{
+      resultado.innerHTML += '<br> Cuidado, obesidade!';
+    }
 
-  if(imc < 17){
-    resultado.innerHTML = '<br/> Seu resultado foi: ' + imc.toFixed(2) + '<br/> Cuidado você está muito abaixo do peso!'
-  }else if(imc > 17 && imc <= 18.49){
-    resultado.innerHTML = '<br/> Seu resultado foi: ' + imc.toFixed(2) + '<br/> Você está Abaixo do peso!';
-  }else if(imc >= 18.5 && imc < 24.99){
-    resultado.innerHTML = '<br/> Seu resultado foi: ' + imc.toFixed(2) + '<br/> Você está no peso ideal!';
-  }else if(imc > 25 && imc <= 29.99){
-    resultado.innerHTML = '<br/> Seu resultado foi: ' + imc.toFixed(2) + '<br/> Você está acima do peso!';
-  }else if(imc >= 30){
-    resultado.innerHTML = '<br/> Seu resultado foi: ' + imc.toFixed(2) + '<br/> Cuidado Obesidade!';
-  }
-
-  document.getElementById('peso').value = '';
-  document.getElementById('altura').value = '';
-
+    //limpando os inputs
+    document.getElementById('peso').value ='';
+    document.getElementById('altura').value ='';
 
 }
