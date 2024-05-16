@@ -10,26 +10,75 @@
 */
 
 let listaDeProdutos = ["Computador", "Telefone", "Mouse", "Teclado"];
-//1
-console.log(listaDeProdutos);
 
-//2
-console.log(listaDeProdutos.length);
+/*1*/
+console.log("A lista possui os seguintes produtos: " + listaDeProdutos);
 
-//3
-let posicao = listaDeProdutos.indexOf("Mouse");
-listaDeProdutos.splice(posicao, 1);
-console.log(listaDeProdutos);
+/*2*/
+console.log("O tamanho da lista é: " + listaDeProdutos.length);
 
-//4
-let resultado = listaDeProdutos.find((item) => {
-    if(item === "Computadora"){
-        return console.log(`O produto ${item} está na lista.`);
-    } else {
-        return console.log("O produto não foi encontrado");
-    }
-});
+/*3*/
+const removeMouse = listaDeProdutos.filter(p => p !== "Mouse");
+console.log("A lista após remove o Mouse: " + removeMouse);
 
-if(resultado === ''){
-    console.log("O produto não foi encontrado");
+/*4*/
+const buscaFind = listaDeProdutos.find(p => p === "Computador");
+if(buscaFind){
+    console.log(`O produto ${buscaFind} está na lista`);
+} else{
+    console.log(`Não existe este produto na lista`);
 }
+
+/*5*/
+console.log(`O item removido foi ${listaDeProdutos.splice(1,1)}`);
+
+
+
+
+console.log("==========================");
+
+
+
+
+// Desafio 2
+/*
+    Crie uma lista de apenas números 1,3,5,7,0,9​
+
+    1.Ordene essa lista do menor para o maior.
+    2.Retire o primeiro numero desta lista.
+    3.Inverta toda ordem da sua lista por exemplo: [1,3,5,7,9] para [9,7,5,3,1]
+*/
+
+let numeros = [1, 3, 5, 7, 0, 9];
+
+/*1*/
+console.log(`Lista ordenada: ${numeros.sort()}`);
+
+/*2*/
+console.log(`O primeiro item da lista, que foi o removido foi: ${numeros.shift()}`);
+
+/*3*/
+console.log(`A lista invertida: ${numeros.reverse()}`);
+
+
+
+
+
+console.log("==========================");
+
+
+
+
+// Desafio 3
+/*
+    Crie uma string que contenha o dia de hoje, exemplo:
+    let hoje = '20/07/2019';
+
+    Separe essa data em variáveis dia onde contenha apenas o dia, mes onde contenha apenas o mes, e ano onde contenha apenas o ano.
+*/
+
+const data = new Date();
+const dia = data.getDate();
+const mes = data.getMonth() + 1;
+const ano = data.getFullYear();
+console.log(`${dia}/${mes}/${ano}`);
